@@ -58,8 +58,7 @@ client.on('interactionCreate', async interaction => {
       )
       .setFooter({ text: 'Stripe Payment Bot' })
       .setTimestamp();
-    await interaction.reply({ embeds: [embed], ephemeral: true });
-  }
+await interaction.reply({ embeds: [embed], flags: 64 });  }
 
   if (interaction.commandName === 'testpayment') {
     await interaction.reply({ content: '🧪 Posting a test payment...', ephemeral: true });
